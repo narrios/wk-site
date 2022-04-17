@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  scroll-behavior: smooth;
+}
+
+/*ScrollBar*/
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/*==================================================================*/
+
+hr {
+  width: 100%;
+  margin: auto;
+}
+
+img {
+  width: 100%;
+}
+
+input {
+  z-index: 1;
+}
+
+/*Nav bar*/
+.nav_links {
+  align-items: center;
+}
+
+/*Button Go to top*/
+#myBtn {
+  right: 60px;
+  border: none;
+  outline: none;
+  justify-content: center;
+  align-content: center;
+  border-radius: 100%;
+  display: none;
+  height: 40px;
+  width: 40px;
+  bottom: 30px;
+  position: fixed;
+  color: black;
+  background-color: #aed5f1;
+  z-index: 3;
+  transition: 0.4s;
+}
+
+#myBtn:hover {
+  color: white;
+  background-color: #0073be;
+}
+
+/*Image grow*/
+.grow {
+  transition: all 0.2s ease-in-out;
+}
+.grow:hover {
+  transform: scale(1.05);
+}
+
+/*Media icons*/
+.media-icons {
+  display: flex;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.media-icons a {
+  position: static;
+  color: #111;
+  font-size: 25px;
+  transition: 0.3s;
+  transition-property: transform;
+}
+
+.media-icons a:not(:last-child) {
+  margin-right: 60px;
+}
+
+.media-icons a:hover {
+  transform: scale(1.5);
+  color: #0073be;
+}
+
+/*About section*/
+.info {
+  max-width: 650px;
+  margin: 60px 100px;
+}
+
+.info h2 {
+  color: #0073be;
+  font-size: 55px;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 2px;
+  line-height: 60px;
+  margin-bottom: 30px;
+}
+
+.info h2 span {
+  color: #aed5f1;
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.info p {
+  font-size: 16px;
+  font-weight: 500;
+  text-align: justify;
+  margin-bottom: 40px;
+}
+
+.info-btn {
+  color: #fff;
+  background: #0073be;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+  transition-property: background;
+}
+
+.info-btn:hover {
+  background: #004b7c;
+  color: #fff;
+}
+
+/*Colecție*/
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section__title {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.colection__container {
+  display: grid;
+  grid-template-columns: repeat(4, 250px);
+  justify-content: center;
+  margin: auto;
+}
+
+.colection__content {
+  position: relative;
+  background: #aed5f1;
+  border-radius: 1rem;
+  padding: 24px 0 16px 0;
+  margin: 10px 25px;
+  width: fit-content;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+  background-color: rgba(255, 255, 255, .15);
+  
+  backdrop-filter: blur(5px);
+}
+
+.colection__img {
+  width: 170px;
+  height: 170px;
+  transition: 0.3s;
+  margin: 5px 15px 25px 15px;
+}
+
+.colection__subtitle,
+.colection__price {
+  display: block;
+}
+
+.colection__subtitle {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.colection__title,
+.colection__price {
+  color: #0073be;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.colection__button {
+  display: inline-flex;
+  padding: 0.5rem;
+  border-radius: 0.25rem 0.25rem 0.75rem 0.25rem;
+  border: none;
+  background: #0073be;
+  position: absolute;
+  right: -3rem;
+  bottom: 0;
+}
+
+.colection__icon {
+  font-size: 1rem;
+  color: white;
+}
+
+.colection__content:hover .colection__img {
+  transform: translateY(-0.5rem);
+}
+
+.colection__content:hover .colection__button {
+  right: 0;
+}
+
+/*Responsive styles*/
+
+@media (max-width: 1160px) {
+  .colection__container {
+    grid-template-columns: repeat(2, 275px);
+  }
+}
+
+@media (max-width: 560px) {
+  .colection__container {
+    grid-template-columns: repeat(2, 250px);
+  }
+}
